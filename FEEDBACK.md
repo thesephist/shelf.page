@@ -44,6 +44,9 @@ Notes:
 - The directory structure thing is super obvious, super nice and easy to work with. The `app-index` seems a little inelegant but otherwise, really intuitive.
 - The per-directory `README` is really nice, but hard to discover and navigate. I'd consolidate into one README at the top of the project?
 - What's `flashErrors`?
+- Documentation about `data-*`
+    - This was honestly pretty tough to figure out from documentation.
+    - I was thinking "I need this piece of data on the page to have this behavior. What collection of tags do I need?" and the documentation wasn't very helpful.
 
 ## Feature set
 
@@ -56,6 +59,9 @@ Notes:
 - Save indicator?
 - Can I show computed values? Like, I want to show "X links shared" at the top of the page.
     - Probably a HBS thing.
+- Is there... a good way to do continuous integration from GitHub? Not a must, but would be really nice.
+- Is there a good way to make a property of an object editable without it being visible? Like, say, a link URL?
+- How are schema changes handled in the deployed version? What have you done in the past?
 
 ## Linus's notes for writing
 

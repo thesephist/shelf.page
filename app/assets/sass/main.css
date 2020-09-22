@@ -1,32 +1,150 @@
+html {
+    --font-serif: 'IBM Plex Serif', 'Georgia', serif;
+    --font-mono: 'IBM Plex Mono', 'Monaco', 'Courier', monospace;
+    --theme-color: #23a381;
+    --font-color: #111;
+    font-size: 18px;
+}
+
 html,
 body {
     margin: 0;
     padding: 0;
+    background: #f5f5f5;
+    font-family: var(--font-serif);
+}
+
+/* LAYOUT */
+
+h1,
+h2,
+h3,
+p {
+    color: var(--font-color);
+}
+
+p,
+li {
+    line-height: 1.5em;
+    margin: 1em 0;
+}
+
+a {
+    color: var(--font-color);
+    cursor: pointer;
+}
+
+input,
+button {
+    font-family: var(--ff-serif);
+}
+
+button {
+    font-size: 16px;
+}
+
+.split {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.split .left,
+.split .right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.split .left a,
+.split .right a {
+    margin: .6em;
+}
+
+header,
+footer,
+article,
+.hero {
+    position: relative;
+    width: calc(100% - 2em);
+    max-width: 840px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header::before, header::after,
+footer::before, footer::after,
+.hero::before, .hero::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: calc(50vw - 50%);
+    height: 100%;
+    top: 0;
+    right: 100%;
+    background: inherit;
+    border: inherit;
+    box-shadow: inherit;
+}
+
+header::after,
+footer::after,
+.hero::after {
+    left: 100%;
 }
 
 /* HEADER */
 
 header {
-
+    --font-color: #fff;
+    background: var(--theme-color);
+    padding: 1em 0;
 }
 
-nav.split {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-
-nav .left,
-nav .right {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+header a {
+    text-decoration: none;
+    font-weight: bold;
 }
 
 /* HERO */
 
+.hero {
+    --font-color: #fff;
+
+    padding-top: 3em;
+    background: var(--theme-color);
+    border-bottom: 4px solid #111;
+    box-shadow: 0 4px rgba(0, 0, 0, .3);
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-top: 0;j
+    margin-bottom: 1rem;
+}
+
 /* BODY */
 
+p.preamble {
+    font-style: italic;
+    --font-color: #777;
+}
+
+section h2 {
+    font-size: 1.2em;
+}
+
 /* FOOTER */
+
+footer {
+    padding: 1.4em 0;
+}
+
+footer p {
+    font-style: italic;
+}
+
+footer a.remake {
+    font-weight: bold;
+}

@@ -2,31 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Shelf.page</title>
   <link rel="stylesheet" type="text/css" href="/sass/blocks.min.css">
   <link rel="stylesheet" type="text/css" href="/sass/main.css">
   <link rel="stylesheet" type="text/css" href="/css/remake.css">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
-    <div class="nav">
-      <a class="logo" href="{{#if currentUser}}/{{currentUser.details.username}}{{else}}/{{/if}}">
-        <img class="logo__image" src="/images/logo.svg">
-        <span class="logo__text">TaskFellow <span class="logo__version">v1.0</span></span>
-      </a>
-      {{#if currentUser}}
-        <div class="nav__user">
-          <div>{{currentUser.details.username}}</div>
-          <a class="nav__button" href="/user/logout">Logout</a>
-        </div>
-      {{else}}
-        <div class="nav__user">
-          <a class="nav__button" href="/user/signup">Sign up</a>
-          <a class="nav__button" href="/user/login">Log in</a>
-        </div>
-      {{/if}}
-    </div>
     {{#if flashErrors }}
       {{#each flashErrors }}
         <div class="flash flash--error">{{ this }}</div>
@@ -37,9 +21,9 @@
         <div class="flash flash--success">{{ this }}</div>
       {{/each}}
     {{/if}}
-    <!-- load app body -->
-    {{> yield }}
   </div>
+  <!-- load app body -->
+  {{> yield }}
   {{#if isPageAuthor}}
     {{!-- Prevent loading the Remake framework if the page isn't editable --}}
     <script src="/js/remake-init.js"></script>
