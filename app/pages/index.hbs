@@ -1,11 +1,94 @@
-<div class="front-page">
-  <div class="front-page__preview-container">
-    <img class="front-page__preview" src="/images/kanban-screenshot.png">
-  </div>
-  <h2 class="front-page__heading">Welcome to TaskFellow</h2>
-  {{#if currentUser}}
-    <a class="button button--large" href="/{{currentUser.details.username}}">Go to your board</a>
-  {{else}}
-    <a class="button button--large" href="/user/signup">Sign up!</a>
-  {{/if}}
+<header>
+    <nav class="split">
+        <div class="left">
+        </div>
+        <div class="right">
+            {{#if currentUser}}
+            <a href="/user/logout">Log out</a>
+            <a href="/{{currentUser.details.username}}">See your shelf</a>
+            {{else}}
+            <a href="/">Get a shelf &rarr;</a>
+            {{/if}}
+        </div>
+    </nav>
+</header>
+
+<div class="hero">
+    <h1>Your public bookshelf.</h1>
+    <p class="bio">
+    Share the good stuff you're reading online, and find what everyone else is
+    reading.
+    </p>
 </div>
+
+<article class="sidebar-split">
+    <div class="mainbar">
+        <p>Hey there! I'm Linus.</p>
+        <p>
+        I used to keep a
+        <a href="https://linus.zone/technical-reading">list of some of my favorite reads online</a>
+        and share it on Twitter, but keeping it updated became a chore, and I
+        wanted a more beautiful place to share my favorite reads online.
+        </p>
+        <p>
+        So I made <strong>shelf.page</strong>! It's your online, public bookshelf,
+        blog-shelf, newsletter-shelf, anything-else-you're-reading-shelf. Here's
+        mine:
+        </p>
+        <a class="block" href="/thesephist">Check out my shelf.page &rarr;</a>
+
+        <h2>But why?</h2>
+        <p>
+        I used to love visiting friends and seeing what was on their
+        bookshelves. Scanning the books and magazines and old newspaper
+        clippings on a bokshelf is such a unique way of understanding how
+        someone thinks, and what's on their mind.
+        </p>
+        <p>
+        These days we're all bustling curators online. We send and share links
+        and recommendations <em>all the time</em>. But we rarely get to look at
+        others' shelves in the same way.  <strong>Shelf.page</strong> is an
+        attempt to revive that feeling, online.
+        </p>
+    </div>
+    <div class="sidebar">
+        <section>
+            <h2>Popular shelf.pages</h2>
+            <p>
+            Proud of your shelf.page? Find me at <a
+                href="https://twitter.com/thesephist">@thesephist</a> on
+            Twitter and I might add your shelf here!
+            </p>
+            <div class="popular-shelves">
+                <a class="popular-item block"
+                   href="/thesephist">
+                    <div class="popular-header">Linus's shelf &rarr;</div>
+                    <div class="popular-bio">
+                        Fine taste, exercised judiciously, with good people, make the difference.
+                    </div>
+                </a>
+                <a class="popular-item block"
+                   href="/thesephist">
+                    <div class="popular-header">Linus's shelf &rarr;</div>
+                    <div class="popular-bio">
+                        Fine taste, exercised judiciously, with good people, make the difference.
+                    </div>
+                </a>
+            </div>
+        </section>
+    </div>
+</article>
+
+<hr/>
+
+<footer>
+    <p>
+    Shelf.page is a project by
+    <a href="https://thesephist.com/" target="_blank">@thesephist</a>.
+    It's made with
+    <a href="https://remaketheweb.com/" target="_blank" class="remake">Remake</a>
+    and
+    <a href="https://thesephist.github.io/blocks.css/" target="_blank">blocks.css</a>.
+    </p>
+</footer>
+

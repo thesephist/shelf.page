@@ -27,11 +27,17 @@ p,
 li {
     line-height: 1.5em;
     margin: 1em 0;
+    max-width: 32em;
 }
 
 a {
     color: var(--font-color);
     cursor: pointer;
+}
+
+a.block {
+    text-decoration: none;
+    display: inline-block;
 }
 
 input,
@@ -60,6 +66,10 @@ button {
 .split .left a,
 .split .right a {
     margin: .6em;
+}
+
+article {
+    margin-top: 2em;
 }
 
 header,
@@ -168,6 +178,36 @@ section h2 {
     width: 100%;
 }
 
+.popular-item {
+    padding: 0;
+}
+
+.popular-header,
+.popular-bio {
+    overflow: hidden;
+    padding: 8px 10px;
+}
+
+.popular-header {
+    --font-color: #fff;
+    color: var(--font-color);
+    background: var(--theme-color);
+    margin-top: -1px; /* blocks.css sizing quirk */
+}
+
+.popular-bio {
+    font-size: .875em;
+    font-weight: normal;
+    font-style: italic;
+}
+
+hr {
+    width: 30%;
+    min-width: 200px;
+    border: 0;
+    border-top: 3px solid var(--font-color);
+}
+
 /* FOOTER */
 
 footer {
@@ -180,4 +220,23 @@ footer p {
 
 footer a.remake {
     font-weight: bold;
+}
+
+@media only screen and (min-width: 700px) {
+    .sidebar-split {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .mainbar {
+        width: 0;
+        flex-grow: 1;
+    }
+
+    .sidebar {
+        flex-grow: 0;
+        flex-shrink: 0;
+        width: 280px;
+        margin-left: .6em;
+    }
 }
