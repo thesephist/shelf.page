@@ -6,8 +6,9 @@
         <div class="right">
             {{#if currentUser}}
             <a href="/user/logout">Log out</a>
+            {{else}}
+            <a href="/">Get a shelf &rarr;</a>
             {{/if}}
-            <a href="/">Get a shelf</a>
         </div>
     </nav>
 </header>
@@ -27,48 +28,67 @@
        >{{bio}}</p>
 </div>
 
-<article>
+<article data-o-key="topics"
+         data-o-type="list">
     <p class="preamble">
-    Here's what {{display_name}} has been reading and recommending about...
+    Here's what {{display_name}} has been reading and recommending, about...
     </p>
 
     {{#for topic in topics}}
     <section data-o-type="object">
         <div class="topic-header split">
             <div class="left">
-                <h2>{{topic.name}}</h2>
+                <h2 class="topic-name"
+                    data-o-type="object"
+                    data-l-key-name
+                    data-i-editable-without-remove>
+                    {{default topic.name "New topic"}}
+                </h2>
             </div>
             <div class="right">
                 <button class="accent block"
                         data-i-new="link">
-                        Add
+                    Add
                 </button>
             </div>
         </div>
         <div class="links"
+             data-o-key="links"
              data-o-type="list"
              data-i-sortable>
-             {{#for link in topic.links}}
-             <div class="fixed block link-item">
-                 <div class="link-title"
+            {{#for link in topic.links}}
+            <div class="fixed block link-item"
+                 data-o-type="object">
+                <div class="link-title"
                      data-o-type="object"
                      data-l-key-label
                      data-i-editable>
-                     {{default link.label "Article name"}}
-                 </div>
-                 <p href="{{link.url}}"
-                    target="_blank"
-                    data-o-type="object"
-                    data-l-key-url
-                    data-i-editable
-                    noopener noreferer>
+                    {{default link.label "Article name"}}
+                </div>
+                <div class="link-url"
+                     target="_blank"
+                     data-o-type="object"
+                     data-l-key-url
+                     data-i-editable>
                     {{default link.url "https://shelf.page/"}}
-                 </p>
-             </div>
+                </div>
+                <a class="link-url-button"
+                   href="{{link.url}}"
+                   target="_blank"
+                   noopener noreferer>
+                    read this &rarr;
+                </a>
+            </div>
             {{/for}}
         </div>
     </section>
     {{/for}}
+
+    <section>
+        <h2 data-i-new="topic">
+            + Add topic section
+        </h2>
+    </section>
 </article>
 
 <footer>

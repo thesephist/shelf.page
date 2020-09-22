@@ -3,6 +3,7 @@
 Notes:
 
 - Run on Fedora Linux with Node v12 and Yarn
+    - Yarn seems to break some of the dependencies so I'm on `npm` now.
 
 ## What I did
 
@@ -47,6 +48,11 @@ Notes:
 - Documentation about `data-*`
     - This was honestly pretty tough to figure out from documentation.
     - I was thinking "I need this piece of data on the page to have this behavior. What collection of tags do I need?" and the documentation wasn't very helpful.
+- Occasionally Remake would throw an error (Unhandled Promise Rejection) and it would hang the following requests for pages. Maybe just restart Remake in this case automatically or catch it earlier?
+- **BUG**: If the user data isn't in the correct schema and causes a template error, sometimes (not sure if always, but could be) causes a completely indecipherable error and hangs pageload.
+    - It seems like I got into this state because I accidentally misused a `data-o-type` directive and said `object` where I should have said `list`, or something like that, and it really broke the DB.
+    - When I set a wrong data attribute like this, it's really hard to understand where my mental model doesn't align with what Remake sees, so debugging is a chore and gets frustrating very quickly. I just end up putting weird `data-l-` attributes in plausible places in DOM and testing things until it doesn't destroy the database.
+    - Still not really sure where `data-o-type=`'s and `data-o-key`'s should go, even though I've gotten it so far with trial and error.
 
 ## Feature set
 
@@ -62,6 +68,7 @@ Notes:
 - Is there... a good way to do continuous integration from GitHub? Not a must, but would be really nice.
 - Is there a good way to make a property of an object editable without it being visible? Like, say, a link URL?
 - How are schema changes handled in the deployed version? What have you done in the past?
+- The objects created from my Remake app doesn't have id's.. and it's also sorted pretty arbitrarily. Are those related? Should I have ID's for everything?
 
 ## Linus's notes for writing
 
@@ -80,3 +87,4 @@ User:
 - It's basically my JSON DB for polyx/etc but automatically done for you.
 - Feels almost like my data and state management is all taken care of, and I'm just in charge of rendering the view.
     - Feels like the nice UX of React, thinking of view as a function of state, not thinking of state management.
+- A really helpful thing to do right after determining the data schema seems to be to map it to a DOM structure where every JSON node has a place to anchor. This helps assign `data-` directives later.

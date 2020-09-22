@@ -36,11 +36,11 @@ a {
 
 input,
 button {
-    font-family: var(--ff-serif);
+    font-family: var(--font-serif);
 }
 
 button {
-    font-size: 16px;
+    font-size: .875em;
 }
 
 .split {
@@ -67,7 +67,7 @@ footer,
 article,
 .hero {
     position: relative;
-    width: calc(100% - 2em);
+    width: calc(100% - 1.6em);
     max-width: 840px;
     margin-left: auto;
     margin-right: auto;
@@ -94,12 +94,16 @@ footer::after,
     left: 100%;
 }
 
+[data-i-new] {
+    cursor: pointer;
+}
+
 /* HEADER */
 
 header {
     --font-color: #fff;
     background: var(--theme-color);
-    padding: 1em 0;
+    padding: .75em 0;
 }
 
 header a {
@@ -120,7 +124,7 @@ header a {
 
 .hero h1 {
     font-size: 2.5em;
-    margin-top: 0;j
+    margin-top: 0;
     margin-bottom: 1rem;
 }
 
@@ -131,8 +135,37 @@ p.preamble {
     --font-color: #777;
 }
 
+section {
+    margin-bottom: 2em;
+}
+
 section h2 {
     font-size: 1.2em;
+}
+
+.link-item {
+    position: relative;
+    padding: .6em .4em;
+    margin-bottom: 1em;
+}
+
+.link-title {
+    padding-bottom: .4em;
+}
+
+.link-url {
+    font-size: .75em;
+    font-family: var(--font-mono);
+    color: #777;
+}
+
+.link-url-button {
+    text-decoration: none;
+    font-size: .875em;
+    display: block;
+    color: var(--theme-color);
+    text-align: right;
+    width: 100%;
 }
 
 /* FOOTER */

@@ -5,12 +5,24 @@
     "web_url": "https://thesephist.com/",
     "topics": [
         {
-            "id": "aTjdkgWaMfiyzh",
+            "id": "aTjdkgWaMliyzh",
             "name": "Software",
             "description": "",
             "links": [
                 {
-                    "id": "aSjdkgWaMfiyzh",
+                    "id": "aSjdkgWaMfigzh",
+                    "label": "My website",
+                    "url": "https:/thesephist.com/"
+                }
+            ]
+        },
+        {
+            "id": "aTjdkgWaMfiyzh",
+            "name": "Community building",
+            "description": "",
+            "links": [
+                {
+                    "id": "aSjdkgWaMfixzh",
                     "label": "My website",
                     "url": "https:/thesephist.com/"
                 }
