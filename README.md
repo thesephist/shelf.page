@@ -1,2 +1,4 @@
-# shelf.page
-What's on your digital shelf?
+# Shelf.page 🪂
+
+What's on your shelf?
+
