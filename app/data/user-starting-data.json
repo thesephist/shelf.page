@@ -1,32 +1,50 @@
 {
-    "id": "pTjdkgWaMfiyzh",
-    "bio": "A few words about yourself.",
-    "display_name": "Linus",
-    "web_url": "https://thesephist.com/",
-    "topics": [
+  "display_name": "Linus",
+  "bio": "fine taste, exercised judiciously, with good people, make the difference. #DFTBA",
+  "topics": [
+    {
+      "name": "Software development",
+      "links": [
         {
-            "id": "aTjdkgWaMliyzh",
-            "name": "Software",
-            "description": "",
-            "links": [
-                {
-                    "id": "aSjdkgWaMfigzh",
-                    "label": "My website",
-                    "url": "https:/thesephist.com/"
-                }
-            ]
+          "label": "The Rust Book",
+          "url": "https://doc.rust-lang.org/book/",
+          "id": "3W0m6pVylni2Tv"
         },
         {
-            "id": "aTjdkgWaMfiyzh",
-            "name": "Community building",
-            "description": "",
-            "links": [
-                {
-                    "id": "aSjdkgWaMfixzh",
-                    "label": "My website",
-                    "url": "https:/thesephist.com/"
-                }
-            ]
+          "label": "My website",
+          "url": "https:/thesephist.com/",
+          "id": "G1zD0pBYJ2bl4T"
+        },
+        {
+          "label": "Article name",
+          "url": "https://shelf.page/",
+          "id": "sx61PrNKEy5FG9"
+        },
+        {
+          "label": "Article name",
+          "url": "https://shelf.page/",
+          "id": "26WKzU67yrSi3c"
         }
-    ]
+      ],
+      "id": "hpdGDJ6gSi4aWn"
+    },
+    {
+      "name": "Community building",
+      "links": [
+        {
+          "label": "My website",
+          "url": "https:/thesephist.com/",
+          "id": "6WjDa0LEKNs8lH"
+        },
+        {
+          "label": "Article name",
+          "url": "https://shelf.page/",
+          "id": "r61xVz7Fl5BZhu"
+        }
+      ],
+      "id": "QgXMAlPtcKBOMX"
+    }
+  ],
+  "id": "pTjdkgWaMfiyzh",
+  "web_url": "https://thesephist.com/"
 }

@@ -59,6 +59,7 @@ Notes:
 - G Suite login or something like that?
 - Is there a hook/directive for removing something from a list without clicking on it? Click to remove seems unintuitive at times.
     - Can I add a hook before delete to confirm?
+- Can I just add a "delete" button to a list item that's always there?
 - Hot reload would be sick, but not essential.
 - I'm using blocks.css. What's the best way to make the field buttons look like blocks.css buttons?
 - Throttle if a bunch of items are added at once, instead of many network requests?
@@ -88,3 +89,4 @@ User:
 - Feels almost like my data and state management is all taken care of, and I'm just in charge of rendering the view.
     - Feels like the nice UX of React, thinking of view as a function of state, not thinking of state management.
 - A really helpful thing to do right after determining the data schema seems to be to map it to a DOM structure where every JSON node has a place to anchor. This helps assign `data-` directives later.
+- From when I first had the idea, I had an app I wouldn't be very hesitant to launch (sans marketing material) in 4 hours, and that was my first time touching this library. That's kind of cool. I anticipate the design / layout / core logic not to change much.
