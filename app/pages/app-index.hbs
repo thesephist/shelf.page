@@ -1,3 +1,19 @@
+<header>
+    <nav class="split">
+        <div class="left">
+            <a href="/">&larr; Shelf.page</a>
+        </div>
+        <div class="left">
+            <a href="/">Get a shelf &rarr;</a>
+        </div>
+    </nav>
+</header>
+
+<div class="hero">
+    <h1>{{display_name}}'s shelf.page</h1>
+    <p class="bio">{{bio}}</p>
+</div>
+
 <div class="header">
   <div 
     class="header__text"
@@ -20,7 +36,7 @@
   >
     {{#for stack in stacks}}
       <div 
-        class="stack"
+        class="stack block"
         data-o-type="object"
         data-l-key-stack-heading
         data-o-default-stack-heading="A Project"
