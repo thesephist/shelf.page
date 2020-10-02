@@ -1,21 +1,39 @@
-<div class="accounts">
-  <form class="accounts__form" action="/user/login" method="post">
-    <div class="accounts__heading">Log in</div>
-    <div class="text-field">
-      <label class="text-field__label">
-        <span class="text-field__label-text">Username</span>
-        <input class="text-field__input" type="text" name="username" required>
-      </label>
-    </div>
-    <div class="text-field">
-      <label class="text-field__label">
-        <span class="text-field__label-text">Password</span>
-        <input class="text-field__input" type="password" name="password" required>
-      </label>
-    </div>
-    <div class="accounts__forgot-link-container">
-      <a class="accounts__forgot-link" href="/user/forgot">Forgot your password?</a>
-    </div>
-    <button class="button button--large button--account" type="submit">Log in</button>
-  </form>
+<header>
+    <nav class="split">
+        <div class="left">
+            <a href="/">Shelf.page</a>
+        </div>
+        <div class="right">
+            <a href="/user/signup">Sign up</a>
+        </div>
+    </nav>
+</header>
+
+<div class="hero">
+    <h1>Log in</h1>
 </div>
+
+<article>
+    <form action="/user/login" method="post">
+        <label>
+            <span>Username</span>
+            <div class="fixed block input-wrapper">
+                <input type="text" name="username" required
+                                   placeholder="thesephist">
+            </div>
+        </label>
+        <label>
+            <span>Password</span>
+            <div class="fixed block input-wrapper">
+                <input type="password" name="password" required>
+            </div>
+        </label>
+        <p>
+            <a href="/user/forgot">Forgot your password?</a>
+            |
+            <a href="/user/signup">Don't have an account? Sign up</a>
+        </p>
+        <button class="accent block" type="submit">Log in &rarr;</button>
+    </form>
+</article>
+

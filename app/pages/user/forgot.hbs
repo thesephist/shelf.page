@@ -1,12 +1,27 @@
-<div class="accounts">
-  <form class="accounts__form" action="/user/forgot" method="post">
-    <div class="accounts__heading">Forgot Password</div>
-    <div class="text-field">
-      <label class="text-field__label">
-        <span class="text-field__label-text">Username</span>
-        <input class="text-field__input" type="text" name="username" required>
-      </label>
-    </div>
-    <button class="button button--large button--account" type="submit">Send reset link</button>
-  </form>
+<header>
+    <nav class="split">
+        <div class="left">
+            <a href="/">Shelf.page</a>
+        </div>
+        <div class="right">
+            <a href="/user/login">Log in</a>
+        </div>
+    </nav>
+</header>
+
+<div class="hero">
+    <h1>Recover your password</h1>
 </div>
+
+<article>
+    <form action="/user/forgot" method="post">
+        <label>
+            <span>Username</span>
+            <div class="fixed block input-wrapper">
+                <input type="text" name="username" required
+                                   placeholder="thesephist">
+            </div>
+        </label>
+        <button class="accent block" type="submit">Send reset link</button>
+    </form>
+</article>
