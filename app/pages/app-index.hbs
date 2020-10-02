@@ -35,12 +35,12 @@
 
     <div data-o-key="topics" data-o-type="list">
         {{#for topic in topics}}
-        <section data-o-type="object">
+        <section data-o-type="object"
+                 data-l-key-name>
             <div class="topic-header split">
                 <div class="left">
                     <h2 class="topic-name"
-                        data-o-type="object"
-                        data-l-key-name
+                        data-l-target-name
                         data-i-editable>
                         {{default topic.name "New topic"}}
                     </h2>
@@ -58,10 +58,10 @@
                  data-i-sortable>
                 {{#for link in topic.links}}
                 <div class="block link-item"
-                     data-o-type="object">
+                     data-o-type="object"
+                     data-l-key-label>
                     <div class="link-title"
-                         data-o-type="object"
-                         data-l-key-label
+                         data-l-target-label
                          data-i-editable>
                         {{default link.label "Article name"}}
                     </div>
@@ -86,7 +86,7 @@
     </div>
 
     <section>
-        <h2 data-i-new>
+        <h2 data-i-new="topic">
             + Add topic section
         </h2>
     </section>
