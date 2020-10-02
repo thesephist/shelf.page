@@ -1,7 +1,7 @@
 html {
     --font-serif: 'IBM Plex Serif', 'Georgia', serif;
     --font-mono: 'IBM Plex Mono', 'Monaco', 'Courier', monospace;
-    --theme-color: #23a381;
+    --theme-color: #0dad80;
     --font-color: #111;
     font-size: 18px;
 }
@@ -12,6 +12,12 @@ body {
     padding: 0;
     background: #f5f5f5;
     font-family: var(--font-serif);
+
+    --block-accent-color: var(--theme-color);
+}
+
+body {
+    overflow-x: hidden;
 }
 
 /* LAYOUT */
@@ -77,7 +83,7 @@ button {
 }
 
 article {
-    margin-top: 2em;
+    margin: 2em auto;
 }
 
 header,
@@ -155,9 +161,9 @@ p.preamble {
 
 div.instructions {
     padding: .1em .8em;
-    background: #ffed90;
+    background: #fff0a0;
     margin-bottom: 1em;
-    border-left: 4px solid #e8cf46;
+    border-left: 4px solid #efd85b;
     font-size: .8em;
 }
 
@@ -228,6 +234,7 @@ section h2 {
 hr {
     width: 30%;
     min-width: 200px;
+    max-width: 500px;
     border: 0;
     border-top: 3px solid var(--font-color);
 }
@@ -261,7 +268,7 @@ footer a.remake {
         flex-grow: 0;
         flex-shrink: 0;
         width: 280px;
-        margin-left: .6em;
+        margin-left: .8em;
     }
 }
 
@@ -287,5 +294,6 @@ label {
 
 form button {
     font-size: 1em;
-    float: right;
+    margin-right: 0 !important;
+    margin-left: auto !important;
 }

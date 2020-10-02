@@ -24,6 +24,17 @@
   </div>
   <!-- load app body -->
   {{> yield }}
+  <hr/>
+  <footer>
+      <p>
+      Shelf.page is a project by
+      <a href="https://thesephist.com/" target="_blank">@thesephist</a>.
+      It's made with
+      <a href="https://remaketheweb.com/" target="_blank" class="remake">Remake</a>
+      and
+      <a href="https://thesephist.github.io/blocks.css/" target="_blank">blocks.css</a>.
+      </p>
+  </footer>
   {{#if isPageAuthor}}
     {{!-- Prevent loading the Remake framework if the page isn't editable --}}
     <script src="/js/remake-init.js"></script>
