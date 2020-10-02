@@ -29,6 +29,24 @@
 </div>
 
 <article>
+    {{#if isPageAuthor}}
+    <div class="instructions">
+        <p><strong>Customize this page!</strong></p>
+        <p>
+        Parts of this page are <em>editable</em>!
+        (<a href="#" id="highlightEditables">Click here</a> to see which parts.)
+        </p>
+        <p>
+        Tap on any editable part of the page to update and remove
+        things &amp; share your page with friends with your link,
+        <a href="https://shelf.page/{{currentUser.details.username}}"
+           target="_blank">
+            shelf.page/{{currentUser.details.username}}
+        </a>.
+        </p>
+    </div>
+    {{/if}}
+
     <p class="preamble">
     Here's what {{display_name}} has been reading and recommending, about...
     </p>
@@ -80,6 +98,11 @@
                     </a>
                 </div>
                 {{/for}}
+
+                {{#if topic.links.length}}
+                {{else}}
+                <p class="empty-state">Add your first link!</p>
+                {{/if}}
             </div>
         </section>
         {{/for}}

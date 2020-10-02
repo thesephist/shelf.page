@@ -68,6 +68,14 @@ button {
     margin: .6em;
 }
 
+.highlightEditables [data-i-editable],
+.highlightEditables [data-i-editable-without-remove],
+[data-user-is-page-author] [data-i-editable]:hover,
+[data-user-is-page-author] [data-i-editable-without-remove]:hover {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, .1);
+    background: rgba(0, 0, 0, .1);
+}
+
 article {
     margin-top: 2em;
 }
@@ -142,7 +150,15 @@ header a {
 
 p.preamble {
     font-style: italic;
-    --font-color: #777;
+    --font-color: #555;
+}
+
+div.instructions {
+    padding: .1em .8em;
+    background: #ffed90;
+    margin-bottom: 1em;
+    border-left: 4px solid #e8cf46;
+    font-size: .8em;
 }
 
 section {
@@ -157,6 +173,7 @@ section h2 {
     position: relative;
     padding: .6em .4em;
     margin-bottom: 1em;
+    transition: transform .2s;
 }
 
 .link-title {
@@ -176,6 +193,13 @@ section h2 {
     color: var(--theme-color);
     text-align: right;
     width: 100%;
+}
+
+.links .empty-state {
+    font-style: italic;
+    text-align: center;
+    max-width: unset;
+    color: #555;
 }
 
 .popular-item {
