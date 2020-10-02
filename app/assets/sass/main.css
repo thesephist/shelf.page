@@ -20,6 +20,85 @@ body {
     overflow-x: hidden;
 }
 
+/* REMAKE BUTTON STYLES */
+/* copied from blocks.css, linus.zone/blocks */
+
+.remake-edit__button:not(:last-child) {
+    margin-right: 12px !important;
+}
+
+.remake-edit__button {
+    font-family: var(--font-serif) !important;
+
+    border: 3px solid var(--block-text-color);
+    border-radius: 3px;
+    padding: 4px 8px;
+    font-weight: bold;
+    cursor: pointer;
+    box-sizing: border-box;
+
+    position: relative;
+    top: -2px;
+    left: -2px;
+    transition: transform 0.2s;
+    z-index: 1;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+.remake-edit__button::before {
+    content: "";
+    background-color: inherit;
+    border: 3px solid var(--block-text-color);
+    border-radius: 3px;
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.remake-edit__button:hover,
+.remake-edit__button:focus {
+    transform: translate(2px, 2px);
+}
+
+.remake-edit__button::after {
+    content: "";
+    display: block;
+    background: var(--block-text-color);
+    border: 3px solid var(--block-text-color);
+    border-radius: 3px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    right: 0;
+    z-index: -2;
+    transition: transform 0.2s;
+}
+
+.remake-edit__button:hover::after,
+.remake-edit__buttonblock:focus::after {
+    transform: translate(-2px, -3px);
+}
+
+.remake-edit__button:active {
+    color: var(--block-text-color);
+    transform: translate(3px, 3px);
+}
+
+.remake-edit__button:active::after {
+    transform: translate(-4px, -4px);
+}
+
+.remake-edit__button:focus {
+    outline: none;
+}
+
 /* LAYOUT */
 
 h1,
@@ -292,7 +371,7 @@ label {
     box-sizing: border-box;
 }
 
-form button {
+form button.blocke8cf46 {
     font-size: 1em;
     margin-right: 0 !important;
     margin-left: auto !important;
