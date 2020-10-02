@@ -99,6 +99,27 @@ body {
     outline: none;
 }
 
+/* REMAKE FLASH ELEMENTS */
+
+.flash {
+    max-width: 500px;
+    width: 90%;
+    transform: translateX(-50%);
+    position: fixed;
+    top: 1em;
+    left: calc(50% - 8px);
+    pointer-events: none; /* to prevent movement */
+    color: #fff;
+}
+
+.flash--error {
+    --block-background-color: #d96457;
+}
+
+.flash--success {
+    --block-background-color: #5784d9;
+}
+
 /* LAYOUT */
 
 h1,
@@ -379,7 +400,7 @@ label {
     box-sizing: border-box;
 }
 
-form button.blocke8cf46 {
+form button.block {
     font-size: 1em;
     margin-right: 0 !important;
     margin-left: auto !important;

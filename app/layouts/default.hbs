@@ -13,12 +13,12 @@
   <div class="container">
     {{#if flashErrors }}
       {{#each flashErrors }}
-        <div class="flash flash--error">{{ this }}</div>
+        <div class="flash fixed block flash--error">{{ this }}</div>
       {{/each}}
     {{/if}}
     {{#if flashSuccesses }}
       {{#each flashSuccesses }}
-        <div class="flash flash--success">{{ this }}</div>
+        <div class="flash fixed block flash--success">{{ this }}</div>
       {{/each}}
     {{/if}}
   </div>

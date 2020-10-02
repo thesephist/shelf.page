@@ -12,6 +12,10 @@ if (window.MutationObserver) {
     const displayNameEdits = document.querySelector('.user-display-name');
     const displayNameTarget = document.querySelector('#display-name-reflect');
 
+    if (!displayNameEdits || !displayNameTarget) {
+        return;
+    }
+
     const mo = new MutationObserver(() => {
         displayNameTarget.textContent = displayNameEdits.textContent;
     });

@@ -18,20 +18,23 @@
         <label>
             <span>Username</span>
             <div class="fixed block input-wrapper">
-                <input type="text" name="username" required
-                                   placeholder="thesephist">
+                <input type="text" name="username"
+                                   autocomplete="username"
+                                   placeholder="thesephist"
+                                   required>
             </div>
         </label>
         <label>
             <span>Password</span>
             <div class="fixed block input-wrapper">
-                <input type="password" name="password" required>
+                <input type="password" name="password"
+                                       autocomplete="current-password" required>
             </div>
         </label>
         <p>
-            <a href="/user/forgot">Forgot your password?</a>
-            |
-            <a href="/user/signup">Don't have an account? Sign up</a>
+        <a href="/user/forgot">Forgot your password?</a>
+        |
+        <a href="/user/signup">Don't have an account? Sign up</a>
         </p>
         <button class="accent block" type="submit">Log in &rarr;</button>
     </form>
