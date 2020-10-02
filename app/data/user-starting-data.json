@@ -1,50 +1,34 @@
 {
-  "display_name": "Linus",
-  "bio": "fine taste, exercised judiciously, with good people, make the difference. #DFTBA",
+  "display_name": "A bookworm",
+  "bio": "A few words about you, what you like to read, and who you are.",
   "topics": [
     {
-      "name": "Software development",
+      "name": "Community building",
       "links": [
         {
-          "label": "The Rust Book",
-          "url": "https://doc.rust-lang.org/book/",
+          "label": "Get Together (book)",
+          "url": "https://gettogether.world/",
           "id": "3W0m6pVylni2Tv"
         },
         {
-          "label": "My website",
-          "url": "https:/thesephist.com/",
-          "id": "G1zD0pBYJ2bl4T"
-        },
-        {
-          "label": "Article name",
-          "url": "https://shelf.page/",
-          "id": "sx61PrNKEy5FG9"
-        },
-        {
-          "label": "Article name",
-          "url": "https://shelf.page/",
+          "label": "A cellular theory of communities, by Linus",
+          "url": "https://thesephist.com/posts/cellular-communities/",
           "id": "26WKzU67yrSi3c"
         }
       ],
       "id": "hpdGDJ6gSi4aWn"
     },
     {
-      "name": "Community building",
+      "name": "Technology",
       "links": [
         {
-          "label": "My website",
-          "url": "https:/thesephist.com/",
-          "id": "6WjDa0LEKNs8lH"
-        },
-        {
-          "label": "Article name",
-          "url": "https://shelf.page/",
+          "label": "A blog post about Gyo, a simply software computer with an assembly language",
+          "url": "https://wiki.xxiivv.com/site/gyo.html",
           "id": "r61xVz7Fl5BZhu"
         }
       ],
       "id": "QgXMAlPtcKBOMX"
     }
   ],
-  "id": "pTjdkgWaMfiyzh",
-  "web_url": "https://thesephist.com/"
+  "id": "pTjdkgWaMfiyzh"
 }

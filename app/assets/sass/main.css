@@ -295,6 +295,7 @@ section h2 {
     font-size: .75em;
     font-family: var(--font-mono);
     color: #777;
+    word-break: break-all;
 }
 
 .link-url-button {
