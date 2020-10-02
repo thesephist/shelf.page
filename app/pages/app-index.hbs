@@ -28,64 +28,65 @@
        >{{bio}}</p>
 </div>
 
-<article data-o-key="topics"
-         data-o-type="list">
+<article>
     <p class="preamble">
     Here's what {{display_name}} has been reading and recommending, about...
     </p>
 
-    {{#for topic in topics}}
-    <section data-o-type="object">
-        <div class="topic-header split">
-            <div class="left">
-                <h2 class="topic-name"
-                    data-o-type="object"
-                    data-l-key-name
-                    data-i-editable-without-remove>
-                    {{default topic.name "New topic"}}
-                </h2>
-            </div>
-            <div class="right">
-                <button class="accent block"
-                        data-i-new="link">
-                    Add
-                </button>
-            </div>
-        </div>
-        <div class="links"
-             data-o-key="links"
-             data-o-type="list"
-             data-i-sortable>
-            {{#for link in topic.links}}
-            <div class="block link-item"
-                 data-o-type="object">
-                <div class="link-title"
-                     data-o-type="object"
-                     data-l-key-label
-                     data-i-editable>
-                    {{default link.label "Article name"}}
+    <div data-o-key="topics" data-o-type="list">
+        {{#for topic in topics}}
+        <section data-o-type="object">
+            <div class="topic-header split">
+                <div class="left">
+                    <h2 class="topic-name"
+                        data-o-type="object"
+                        data-l-key-name
+                        data-i-editable>
+                        {{default topic.name "New topic"}}
+                    </h2>
                 </div>
-                <div class="link-url"
-                     target="_blank"
-                     data-o-type="object"
-                     data-l-key-url
-                     data-i-editable>
-                    {{default link.url "https://shelf.page/"}}
+                <div class="right">
+                    <button class="accent block"
+                            data-i-new="link">
+                        Add link
+                    </button>
                 </div>
-                <a class="link-url-button"
-                   href="{{link.url}}"
-                   target="_blank"
-                   noopener noreferer>
-                    read this &rarr;
-                </a>
             </div>
-            {{/for}}
-        </div>
-    </section>
-    {{/for}}
+            <div class="links"
+                 data-o-key="links"
+                 data-o-type="list"
+                 data-i-sortable>
+                {{#for link in topic.links}}
+                <div class="block link-item"
+                     data-o-type="object">
+                    <div class="link-title"
+                         data-o-type="object"
+                         data-l-key-label
+                         data-i-editable>
+                        {{default link.label "Article name"}}
+                    </div>
+                    <div class="link-url"
+                         target="_blank"
+                         data-o-type="object"
+                         data-l-key-url
+                         data-i-editable-without-remove>
+                        {{default link.url "https://shelf.page/"}}
+                    </div>
+                    <a class="link-url-button"
+                       href="{{link.url}}"
+                       target="_blank"
+                       noopener noreferer>
+                        read this &rarr;
+                    </a>
+                </div>
+                {{/for}}
+            </div>
+        </section>
+        {{/for}}
+    </div>
 
     <section>
-        <h2 data-i-new="topic">
+        <h2 data-i-new>
             + Add topic section
         </h2>
     </section>
