@@ -90,3 +90,8 @@ User:
     - Feels like the nice UX of React, thinking of view as a function of state, not thinking of state management.
 - A really helpful thing to do right after determining the data schema seems to be to map it to a DOM structure where every JSON node has a place to anchor. This helps assign `data-` directives later.
 - From when I first had the idea, I had an app I wouldn't be very hesitant to launch (sans marketing material) in 4 hours, and that was my first time touching this library. That's kind of cool. I anticipate the design / layout / core logic not to change much.
+
+---
+
+- Preview link feature -- if loaded with `?preview=1` or something pretend as if not logged in.
+- Extra referrents in one way data binding

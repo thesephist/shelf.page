@@ -7,7 +7,7 @@
             {{#if currentUser}}
             <a href="/user/logout">Log out</a>
             {{else}}
-            <a href="/">Get a shelf &rarr;</a>
+            <a href="/user/signup">Get your own shelf &rarr;</a>
             {{/if}}
         </div>
     </nav>
@@ -38,17 +38,23 @@
         </p>
         <p>
         Tap on any editable part of the page to update and remove
-        things &amp; share your page with friends with your link,
+        things, and drag to reorder links. You can share your page with friends with your link,
         <a href="https://shelf.page/{{currentUser.details.username}}"
            target="_blank">
             shelf.page/{{currentUser.details.username}}
         </a>.
         </p>
+        <p>
+        When others visit this page, the links you add below will be clickable.
+        (You can also try it yourself by opening a private browsing tab.)
+        </p>
     </div>
     {{/if}}
 
     <p class="preamble">
-    Here's what {{display_name}} has been reading and recommending, about...
+    Here's what
+    <span id="display-name-reflect">{{display_name}}</span>
+    has been reading and recommending, about...
     </p>
 
     <div data-o-key="topics" data-o-type="list">
@@ -73,9 +79,8 @@
             <div class="links"
                  data-o-key="links"
                  data-o-type="list"
-                 data-i-sortable>
-                {{#for link in topic.links}}
-                <div class="block link-item"
+                 data-i-sortable>{{#for link in topic.links}}
+                <div class="{{#if ../../isPageAuthor}}fixed{{/if}} block link-item"
                      data-o-type="object"
                      data-l-key-label>
                     <div class="link-title"
@@ -90,28 +95,27 @@
                          data-i-editable-without-remove>
                         {{default link.url "https://shelf.page/"}}
                     </div>
+                    {{#if ../../isPageAuthor}}
+                    {{else}}
                     <a class="link-url-button"
                        href="{{link.url}}"
                        target="_blank"
                        noopener noreferer>
                         read this &rarr;
                     </a>
+                    {{/if}}
                 </div>
-                {{/for}}
-
-                {{#if topic.links.length}}
-                {{else}}
-                <p class="empty-state">Add your first link!</p>
-                {{/if}}
-            </div>
+            {{/for}}</div>
         </section>
         {{/for}}
     </div>
 
     <section>
-        <h2 data-i-new="topic">
-            + Add topic section
-        </h2>
+        <div class="topic-header split">
+            <h2 data-i-new="topic">
+                + Add a topic section
+            </h2>
+        </div>
     </section>
 </article>
 

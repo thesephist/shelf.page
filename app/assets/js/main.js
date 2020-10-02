@@ -2,8 +2,22 @@
 
 function highlightEditables(evt) {
     evt.preventDefault();
-    document.body.classList.add('highlightEditables');
+    document.body.classList.toggle('highlightEditables');
 }
 
 const hleButton = document.querySelector('#highlightEditables');
-hleButton && hleButton.addEventListener('click', highlightEditables);
+if (hleButton) hleButton.addEventListener('click', highlightEditables);
+
+if (window.MutationObserver) {
+    const displayNameEdits = document.querySelector('.user-display-name');
+    const displayNameTarget = document.querySelector('#display-name-reflect');
+
+    const mo = new MutationObserver(() => {
+        displayNameTarget.textContent = displayNameEdits.textContent;
+    });
+
+    mo.observe(displayNameEdits, {
+        childList: true,
+        subtree: false,
+    });
+}

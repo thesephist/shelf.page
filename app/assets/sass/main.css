@@ -238,12 +238,17 @@ p.preamble {
     --font-color: #555;
 }
 
-div.instructions {
+.instructions {
     padding: .1em .8em;
     background: #fff0a0;
     margin-bottom: 1em;
     border-left: 4px solid #efd85b;
     font-size: .8em;
+}
+
+.instructions,
+.instructions p {
+    max-width: 40em;
 }
 
 section {
@@ -280,11 +285,14 @@ section h2 {
     width: 100%;
 }
 
-.links .empty-state {
+.links:empty::after {
+    content: 'Add your first link!';
     font-style: italic;
     text-align: center;
     max-width: unset;
     color: #555;
+    display: block;
+    line-height: 4em;
 }
 
 .popular-item {
