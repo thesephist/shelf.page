@@ -2,9 +2,9 @@
 
 I used to keep a [list of some of my favorite reads online](https://linus.zone/technical-reading) and share it on Twitter, but keeping it updated became a chore, and I wanted a more beautiful place to share my favorite reads online.
 
-So I made [Shelf.page](https://shelfpage.remakeapps.com/)! It's your online, public bookshelf, blog-shelf, newsletter-shelf, anything-else-you're-reading-shelf. You can add links to your favorite articles, blogs, and issues of newsletters, grouped by topic.
+So I made [Shelf.page](https://shelf.page/)! It's your online, public bookshelf, blog-shelf, newsletter-shelf, anything-else-you're-reading-shelf. You can add links to your favorite articles, blogs, and issues of newsletters, grouped by topic.
 
-Here's mine, at [shelfpage.remakeapps.com/thesephist](https://shelfpage.remakeapps.com/thesephist).
+Here's mine, at [shelf.page/thesephist](https://shelf.page/thesephist).
 
 ![A screenshot of shelf.page](screenshot.png)
 
